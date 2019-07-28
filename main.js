@@ -22,18 +22,28 @@ Output =>
 [49, 20, 500]
 
 */
+var arrOfNum2 = [7,2,50]
+function MultiByNum1OrNum2(arr,num1,num2) {
+  for (i=0;i<arr.length;i++){
+    if(arr[i] % num1 == 0){
+      const arr1=arr.map(x=>x*num1);
+    return arr1; 
+    }else{
+      const arr2=arr.map(x=>x*num2);
+      return arr2; 
+    }
+  }       
+}MultiByNum1OrNum2(arrOfNum2,7,10)
 
-function MultiByNum1OrNum2() {
-  // WRITE YOUR CODE UNDER THIS LINE         
-}
+
 
 /* Q2:
-Using Filter
-Create a function called longerAndYounger
-that takes an array of objects and 2 numbers as a parameter
-and return a new array with the object has 
-a name longer than the first parameter
-and in the same time less than the second parameters 
+ Using Filter
+ Create a function called longerAndYounger
+ that takes an array of objects and 2 numbers as a parameter
+ and return a new array with the object has 
+ a name longer than the second parameter
+ and in the same time the age less than the third parameter
 
 var arrOfObj1 = [
   { name: "alex" ,age:22},
@@ -58,9 +68,21 @@ Output =>
 ]
 */
 
-function longerAndYounger() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+
+var arrOfObj1 = [
+  { name: "alex" ,age:22},
+  { name: "mercer",age:26},
+  { name: "alice" ,age:33},
+  { name: "zaheer",age:35},
+  { name: "elizabeth",age:45}
+]
+
+function longerAndYounger(arr,num1,num2) {
+  var arr1=arr.filter (a => a.name.length > num1 && a.age <num2)
+  return a;
 }
+longerAndYounger(arrOfObj1,3,30)
+
 
 /* Q3:
 Using Reduce
@@ -89,9 +111,21 @@ Output =>
 "alice, fried chiken, pizaa, burger, hot dog, eggs"
   
 */
-function nameAndAllFoods() {
-  // WRITE YOUR CODE UNDER THIS LINE         
-}
+var arrOfObj2 = [
+  { name: "alex", food: "fried chiken" },
+  { name: "mercer", food: "pizaa" },
+  { name: "alice", food: "burger" },
+  { name: "zaheer", food: "hot dog" },
+  { name: "elizabeth", food: "eggs" }
+]
+function nameAndAllFoods(arr,num) {
+  const arr1= arr.reduce ((a,b )=> {
+    if (b.name.length == num){
+      return b +""+ food;
+    }
+  },0)
+
+}nameAndAllFoods(arrOfObj2,0)
 
 
 /*
